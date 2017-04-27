@@ -5,6 +5,11 @@
 #include <iostream>
 #include <stdlib.h>
 
+#define max_x 79
+#define mix_x 1
+#define min_y 3
+#define max_y 23
+
 class TheSnakeGame;
 class Snake;
 class Creature {
@@ -16,7 +21,7 @@ class Creature {
 	Point startPoint;
 	Direction defaultDir;
 public:
-	enum { max_x = 79, min_x = 1, min_y = 3, max_y = 23, FIRST_SNAKE = 0, SECOND_SNAKE = 1,FIRST_FLIER=0,SECOND_FLIER=1 };
+	enum { FIRST_SNAKE = 0, SECOND_SNAKE = 1,FIRST_FLIER=0,SECOND_FLIER=1 };
 	Creature(const Point& startingPoint, char c, Direction _direction) : body(startingPoint), symbol(c), direction(_direction) 
 	{
 		startPoint = startingPoint;
